@@ -1,0 +1,2 @@
+# espanso
+Espanso Configuration
