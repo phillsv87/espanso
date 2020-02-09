@@ -1,0 +1,25 @@
+filter_title: "Code"
+backend: "Clipboard"
+
+matches:
+  - trigger: "::js-prop"
+    vars:
+      - name: name
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text name"
+      - name: type
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text type"
+      - name: defaultValue
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text defaultValue"
+    replace: |
+      private _{{name}}:{{type}}={{defaultValue}};
+          public get {{name}}(){return this._{{name}}}
+          public set {{name}}(value:{{type}}){
+              this._{{name}}=value;
+              this.emitProperty(this,'{{name}}');
+          }

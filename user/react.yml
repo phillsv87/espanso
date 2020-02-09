@@ -33,7 +33,7 @@ matches:
           root:{
               flex:1
           }
-      })
+      });
   
   - trigger: "::re-comp"
     vars:
