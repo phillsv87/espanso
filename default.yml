@@ -17,3 +17,6 @@ matches:
     replace: |
       #!/usr/local/bin/pwsh
       $ErrorActionPreference="Stop"
+
+  - trigger: "::cancel"
+    replace: "CancellationToken cancel"
