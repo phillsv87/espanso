@@ -20,3 +20,19 @@ matches:
 
   - trigger: "::cancel"
     replace: "CancellationToken cancel"
+
+  - trigger: "::date"
+    replace: "{{time}}"
+    vars:
+      - name: time
+        type: date
+        params:
+          format: "%F"
+
+  - trigger: "::now"
+    replace: "{{time}}"
+    vars:
+      - name: time
+        type: date
+        params:
+          format: "%+"
