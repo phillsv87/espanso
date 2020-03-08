@@ -60,6 +60,39 @@ matches:
           )
 
       }
+  
+  - trigger: "::re-ncomp"
+    vars:
+      - name: name
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text name"
+    replace: |
+      import React from 'react';
+      import {createStyleSheet} from '../CommonJs/CommonReact';
+
+      interface {{name}}Props
+      {
+          
+      }
+
+      export default function {{name}}({
+
+      }:{{name}}Props){
+
+          return (
+              <div style={styles.root}>
+                  Component
+              </div>
+          );
+
+      }
+
+      const styles=createStyleSheet({
+          root:{
+              flex:1,
+          }
+      });
 
   - trigger: "::js-prop"
     vars:
