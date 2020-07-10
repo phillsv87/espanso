@@ -4,6 +4,10 @@ Espanso Configuration
 
 
 ## Setup
+
+- Install PowerShell
+  - macOS: brew cask install powershell
+
 - Install Espanso - https://espanso.org/
 
 - Clone this repo to the default Espanso configuration directory.
