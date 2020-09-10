@@ -115,3 +115,23 @@ matches:
               this._{{name}}=value;
               this.emitProperty(this,'{{name}}');
           }
+
+  - trigger: "::re-fxasync"
+    vars:
+      - name: errorMessage
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text errorMessage"
+    replace: |
+      useEffect(()=>{
+          let m=true;
+          const work=async ()=>{
+              try{
+                  
+              }catch(ex){
+                  Log.error('{{errorMessage}}',ex);
+              }
+          }
+          work();
+          return ()=>{m=false};
+      },[]);
