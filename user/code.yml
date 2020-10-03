@@ -34,6 +34,40 @@ matches:
               flex:1
           }
       });
+
+  - trigger: "::rn-tcomp"
+    vars:
+      - name: name
+        type: shell
+        params:
+          cmd: "~/Library/Preferences/espanso/scripts/Prompt.ps1 -text name"
+    replace: |
+      import React from 'react';
+      import { View } from 'react-native';
+      import { ThemeManager } from '../lib/style';
+
+      interface {{name}}Props
+      {
+          
+      }
+
+      export default function {{name}}({
+
+      }:{{name}}Props){
+
+          return (
+              <View style={styles.root}>
+
+              </View>
+          )
+
+      }
+
+      const styles=ThemeManager.createSheet(()=>({
+          root:{
+              flex:1
+          }
+      }));
   
   - trigger: "::re-comp"
     vars:
