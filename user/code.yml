@@ -31,7 +31,7 @@ matches:
 
       const styles=StyleSheet.create({
           root:{
-              flex:1
+              
           }
       });
 
@@ -65,7 +65,7 @@ matches:
 
       const styles=ThemeManager.createSheet(()=>({
           root:{
-              flex:1
+              
           }
       }));
   
@@ -124,7 +124,7 @@ matches:
 
       const styles=createStyleSheet({
           root:{
-              flex:1,
+              
           }
       });
 
