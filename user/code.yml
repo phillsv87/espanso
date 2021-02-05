@@ -182,13 +182,12 @@ matches:
     replace: |
       useEffect(()=>{
           let m=true;
-          const work=async ()=>{
+          (async ()=>{
               try{
                   
               }catch(ex){
                   Log.error('{{errorMessage}}',ex);
               }
-          }
-          work();
+          })()
           return ()=>{m=false};
       },[]);
