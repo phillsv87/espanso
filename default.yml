@@ -1,4 +1,6 @@
-backend: "Clipboard"
+
+backend: Inject
+undo_backspace: false
 
 # espanso configuration file
 
@@ -12,14 +14,6 @@ matches:
   
   - trigger: "::@l"
     replace: "logic@newbaselogic.com"
-
-  - trigger: "::pwsh"
-    replace: |
-      #!/usr/local/bin/pwsh
-      $ErrorActionPreference="Stop"
-
-  - trigger: "::cancel"
-    replace: "CancellationToken cancel"
 
   - trigger: "::date"
     replace: "{{time}}"
